@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* changement de page */
+a {
+    text-decoration: none;
+    color: white;
+}
+.changement {
+    width: 60%;
+    margin: 10px 5px;
+    padding: 10px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.changement:hover {
+    background-color: #b30000;
+}
+
+/* bloc de quiz */
+#quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* nom quizz */
+#utilisateur {
+    display: flex;
+    justify-content: left;
+}
+#nom {
+    margin: 0;
+}
+
+/* bouton de reponse */
+button.choice {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button.choice:hover {
+    background-color: #b30000;
+}
+
+/* bloque action et score-temps */
+#actions, #time-score {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* temps et score */
+#timer, #score {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+/* bloque accueil et resultat */
+#accueil, #resultat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* input nom utilisateur */
+.name {
+    width: 53%;
+    margin: 10px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
