@@ -19,11 +19,17 @@ try {
 
     $info = $stmt3->fetch(PDO::FETCH_ASSOC);
 
-    if ($info['meilleur_score'] < $_SESSION['score']) {
-        $stmt2 = $pdo->prepare("UPDATE utilisateurs SET meilleur_score = :score WHERE nom = :nom");
-        $stmt2->bindParam(':score', $_SESSION['score']);
-        $stmt2->bindParam(':nom', $_SESSION['utilisateur']);
-        $stmt2->execute();
+    $stmt4 = $pdo->prepare("SELECT * FROM utilisateurs WHERE nom = :nom");
+    $stmt4->bindParam(':nom', $_SESSION['utilisateur']);
+    $stmt4->execute();
+
+    $test_score = $stmt4->fetch(PDO::FETCH_ASSOC);
+
+    if ($_SESSION['score'] > $test_score['meilleur_score']) {
+        $stmt5 = $pdo->prepare("UPDATE utilisateurs SET meilleur_score = :score WHERE nom = :nom");
+        $stmt5->bindParam(':score', $_SESSION['score']);
+        $stmt5->bindParam(':nom', $_SESSION['utilisateur']);
+        $stmt5->execute();
     }
 }
 catch (PDOException $e) {

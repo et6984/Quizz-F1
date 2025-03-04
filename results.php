@@ -43,7 +43,7 @@
                     <td>Dernière Score : <?php echo $score['der_score'];?></td>
                 </tr>
                 <tr>
-                    <td>Mellieur Score : <?php echo $score['meilleur_score'];?></td>
+                    <td>Meilleur Score : <?php echo $score['meilleur_score'];?></td>
                 </tr>
             </table>
             <div id="actions">
