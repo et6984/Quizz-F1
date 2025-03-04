@@ -17,7 +17,7 @@ try {
     $stmt3->bindParam(':nom', $_SESSION['utilisateur']);
     $stmt3->execute();
 
-    $info = $stmt->fetch(PDO::FETCH_ASSOC);
+    $info = $stmt3->fetch(PDO::FETCH_ASSOC);
 
     if ($info['meilleur_score'] < $_SESSION['score']) {
         $stmt2 = $pdo->prepare("UPDATE utilisateurs SET meilleur_score = :score WHERE nom = :nom");

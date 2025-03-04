@@ -38,7 +38,6 @@
                         setTimeout(function () {
                             location.reload();
                         }, 2000);
-
                     } else {
                         choice.style.backgroundColor = 'black';
                         choices.forEach((choice) => choice.addEventListener('click', stopClick, true));
